@@ -1,0 +1,39 @@
+package application;
+
+module Program {
+
+	function main (args) {
+
+		var i = 0;
+		var b = true;
+
+		writeln("--- for ---");
+
+		for(; i < 10; i++) {
+			writeln(i);
+		}
+
+		writeln("--- while ---");
+
+		i = 0;
+
+		while(b) {
+			
+			writeln(i);
+
+			if (i >= 10) b = !b;
+			
+			i++;
+		}
+
+		writeln("--- foreach ---");
+
+		var arr = ["Santa", "Jonny", "Sara", "Tom"];
+
+		foreach(var elem : arr) {
+
+			writeln(elem);
+
+		}
+	}
+}

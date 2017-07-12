@@ -1,0 +1,28 @@
+package application;
+
+module Program {
+	
+	function main(args) {
+		call1();
+	}
+
+	function call1() {
+		call2();
+	}
+
+	function call2() {
+		call3();
+	}
+
+	function call3() {
+		call4();	
+	}
+
+	function call4() {
+		error();
+	}
+
+	function error() {
+		var c = "hello" - 15;
+	}
+}

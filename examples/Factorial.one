@@ -1,0 +1,16 @@
+package application;
+
+module Program {
+	
+	function main(args) {
+
+		var n = read("Enter n: ");
+		var x = int(n);
+		writeln("factorial of " + n + ": " + factorial(x));
+	}
+
+	function factorial(x) {
+		if (x == 1) return x;
+		return x * factorial(x - 1);
+	}
+}

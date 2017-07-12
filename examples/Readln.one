@@ -1,0 +1,14 @@
+package application;
+
+module Program {
+
+	function main (args) {
+		var a;
+		var b;
+
+		writeln("Программа для вычисления суммы двух чисел.");
+		a = int(readln("Введите a: "));
+		b = int(readln("Введите b: "));
+		writeln("ответ: ", a + b);
+	}
+}

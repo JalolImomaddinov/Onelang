@@ -1,0 +1,22 @@
+package application;
+
+module Program {
+
+	function main (args) {
+		var binary = load("D:/Code.cdx");
+		var utils = binary.utils;
+		var Arrays = utils.Arrays;
+		writeln(Arrays.SIMPLE_ARRAY);
+		writeln(Arrays.getArray());
+
+		var list = utils.ArrayList.createInstance();
+
+		writeln(list.size());
+		list.add("Mike");
+		list.add("Jackson");
+		list.add("Angela");
+		list.add("Sveta");
+		writeln(list.size());
+		writeln(list.toText());
+	}
+}

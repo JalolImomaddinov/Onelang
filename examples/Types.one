@@ -1,0 +1,10 @@
+package application;
+
+using types;
+
+module Program {
+	function main(args) {
+    var lst = types.asList("Application", "sources" , 10);
+    writeln(lst);
+  }
+}

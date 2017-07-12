@@ -1,0 +1,55 @@
+//Динамически загружаемый код.
+//Cкомпилирован Code.cdx
+//Кидаем бинарник в D:/
+
+package utils;
+
+module Arrays {
+	
+	var SIMPLE_ARRAY = [1, 2, 3];
+
+	function arraycopy(target, start, newarr, length) {
+
+		for(var i = start; i < length; i++) {
+			newarr[i] = target[i];
+		}
+	}
+
+	function trimarray(arr, size) {
+		var newarr = new [size];
+		arraycopy(arr, 0, newarr, size);
+		return newarr;
+	}
+
+	function getArray() -> SIMPLE_ARRAY;
+}
+	
+
+class ArrayList {
+
+	var array = new [50];
+	var pointer = 0;
+
+	function add(element) {
+
+		if (pointer >= array.length) {
+			var new_size = int(array.length * 1.5);
+
+		    var new_arr = new [new_size];
+
+		    Arrays.arraycopy(array, 0, new_arr, size());
+
+		    array = new_arr;
+
+		}
+
+		array[pointer] = element;
+		pointer++;
+	}
+
+	function get(i) -> array[i];
+
+	function toText() -> text(Arrays.trimarray(array, size()));
+
+	function size() -> pointer;
+}

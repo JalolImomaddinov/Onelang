@@ -1,0 +1,24 @@
+package application;
+
+module Program {
+	
+	function main(args) {
+		var object = new Activator();
+		accept(object.getInstance());
+	}
+
+	function accept(instance) {
+		instance.printString();
+	}
+}
+
+class Activator {
+
+	function getInstance() {
+		return this;
+	}
+
+	function printString() {
+		println("HelloInstance!");
+	}
+}

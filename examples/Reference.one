@@ -1,0 +1,32 @@
+package application;
+
+module Program {
+
+	function main (args) {
+		var number = 10;
+
+		var res = ref(true)(number);
+		writeln(res);
+		res = ref(false)(number);
+		writeln(res);
+	}
+
+	function ref (condition) -> condition ? ::recfact : ::lpfact;
+
+	function recfact(x) {
+		if (x == 1) 
+			return 1;
+
+		return x * recfact(x-1);
+	}
+
+	function lpfact(x) {
+		var result = 1;
+
+		for(var i = 2; i <= x; i++) {
+			result *= i;
+		}
+
+		return result;
+	}
+}

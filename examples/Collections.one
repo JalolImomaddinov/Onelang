@@ -1,0 +1,33 @@
+package application;
+
+module Program {
+
+	function main (args) {
+
+		var arr = [10, 12];
+		var list;
+		var map = {10: 12, 45: 100};
+
+		arr = new [125];
+		list = new [];
+		map = new {};
+
+		arr[10] = "Ten";
+		
+		list <- 1, 2, 3;
+
+		list[2] = 5;
+
+		map <- "one" : 1, "two" : 2, "three" : 3;
+
+		map["three"] = 5;
+
+		writeln(arr[10]);
+
+		writeln(list[2]);
+		
+		writeln(map["three"]);
+
+		writeln(map.three);
+	}
+}

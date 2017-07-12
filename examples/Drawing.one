@@ -1,0 +1,59 @@
+package application;
+
+using drawing;
+
+module Program {
+	
+	var x = 10;
+	var y = 10;
+	var w = 640;
+	var h = 480;
+    
+    var size = 50;
+
+    function main(args){
+      drawing.window("Hello", w, h);
+      drawing.setOnKeyPressed(::onKeyPressed);
+      drawing.setCloseOperation(drawing.EXIT_ON_CLOSE);
+      paint();
+    }
+
+    function paint() {
+    	drawing.color(255, 255, 255);
+    	drawing.frect(0, 0, w, h);
+    	drawing.color(255, 0, 0);
+    	drawing.frect(x, y, size, size);
+    	drawing.repaint();
+    }
+
+  	function onKeyPressed(key) {
+      if (key == drawing.VK_UP) {
+      	y -= 5;
+      	if (y <= 0)
+      		y = 0;
+      }
+
+      if (key == drawing.VK_DOWN) {
+      	y += 5;
+      	if (y >= (h - size)){
+      		y = h - size;
+      	}
+      }
+
+      if (key == drawing.VK_LEFT) {
+      	x -= 5;
+      	if (x <= 0)
+      		x = 0;
+      }
+
+      if (key == drawing.VK_RIGHT) {
+      	x += 5;
+      	var asize = w - size;
+      	var b = x >= asize;
+      	if (b) {
+      		x = w - size;
+      	}
+      }
+      paint();
+    }
+}

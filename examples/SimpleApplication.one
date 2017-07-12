@@ -1,0 +1,7 @@
+package application;
+
+module Program {
+	function main (args) {
+		writeln("HelloApp!");
+	}
+}

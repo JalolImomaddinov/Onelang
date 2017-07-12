@@ -1,0 +1,12 @@
+package application;
+
+using std;
+
+module Program {
+
+	function main() {
+		writeln("HelloApp!");
+		std.delay(2500);
+		writeln("done.");
+	}
+}

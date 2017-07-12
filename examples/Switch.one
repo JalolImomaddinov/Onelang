@@ -1,0 +1,46 @@
+package application;
+
+module Program {
+
+	function main (args) {
+		var item = 10;
+
+		switch(item) {
+			case 1:
+				writeln("One");
+				break;
+			case 4:
+				writeln("Four");
+				break;
+			case 7:
+				writeln("Seven");
+				break;
+			case 10:
+				writeln("Ten");
+				break;
+			default: 
+				writeln("Unknown number: " + item);
+		}
+
+		item = "Ten";
+
+		switch(item) {
+			case "One":
+				writeln(1);
+				break;
+			case "Four":
+				writeln(4);
+				break;
+			case "Seven":
+				writeln(7);
+				break;
+			case "Ten":
+				writeln(10);
+				break;
+			default: 
+				writeln("Unknown string: " + item);
+		}
+
+	}
+
+}

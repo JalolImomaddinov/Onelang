@@ -1,0 +1,25 @@
+package application;
+
+module Program {
+
+	function main (args) {
+
+		var a;
+		var b;
+		var c;
+
+		a = true;
+
+		if (a) {
+			if (a) a = !a;
+			b = a;
+			c = b;
+			c = a;
+			b = !c;
+
+			a = c ? c : b;
+		}
+
+		writeln(a);
+	}
+}
